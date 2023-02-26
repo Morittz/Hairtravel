@@ -1,5 +1,3 @@
-<script src="https://weblocks.io/library.js"></script>
-<script>
 var haarfarbe, bereich, jahre, upload, Kundenname, form, Email, Telefonnummer;
 
 // Describe this function...
@@ -250,5 +248,3 @@ var we_tabs_next_button = '[bloc=next-question]';
       Telefonnummer = getValueFromInput("Telefonnummer");
         Check_Form();
 });
-
-</script>
