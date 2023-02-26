@@ -1,6 +1,7 @@
-var haarfarbe, bereich, jahre, upload, Kundenname, form, Email, Telefonnummer;
 <script src="https://weblocks.io/library.js"></script>
 <script>
+var haarfarbe, bereich, jahre, upload, Kundenname, form, Email, Telefonnummer;
+
 // Describe this function...
 function Check_Form() {
   if (Kundenname == null && Email == null && Telefonnummer == null) {
@@ -249,4 +250,5 @@ var we_tabs_next_button = '[bloc=next-question]';
       Telefonnummer = getValueFromInput("Telefonnummer");
         Check_Form();
 });
+
 </script>
