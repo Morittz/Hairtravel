@@ -1,7 +1,6 @@
+var haarfarbe, bereich, jahre, upload, Kundenname, form, Email, Telefonnummer;
 <script src="https://weblocks.io/library.js"></script>
 <script>
-var haarfarbe, bereich, jahre, upload, Kundenname, form, Email, Telefonnummer, optional, thanks;
-
 // Describe this function...
 function Check_Form() {
   if (Kundenname == null && Email == null && Telefonnummer == null) {
@@ -250,49 +249,4 @@ var we_tabs_next_button = '[bloc=next-question]';
       Telefonnummer = getValueFromInput("Telefonnummer");
         Check_Form();
 });
-    $('[bloc=next-question]').on('click',function() {
-  if($('.w--tab-active').attr('data-w-tab')=='upload') {
-
-        nextTab = 'optional';
-        we_activeTab = $(".w--tab-active").attr("data-w-tab");
-        we_indexOfActiveTab = tabList.indexOf(we_activeTab);
-        we_indexOfNextTab = we_indexOfActiveTab + 1;
-        we_indexOfPrevTab = we_indexOfActiveTab - 1;
-        we_prevTab = tabList[we_indexOfPrevTab];
-        we_amountOfTabs = tabList.length;
-
-        if (we_indexOfNextTab < we_amountOfTabs) {
-          tabList[we_indexOfNextTab] = nextTab;
-        } else {
-          tabList.push(nextTab);
-        }
-        $(we_tabs_next_button).addClass(we_tabs_active_class);
-        $(".w--tab-active").attr('next-tab',nextTab);
-        $($('[data-w-tab=optional]')).attr('prev-tab',we_activeTab);
-
-
-      }});
-$('[bloc=next-question]').on('click',function() {
-  if($('.w--tab-active').attr('data-w-tab')=='optional') {
-
-        nextTab = 'thanks';
-        we_activeTab = $(".w--tab-active").attr("data-w-tab");
-        we_indexOfActiveTab = tabList.indexOf(we_activeTab);
-        we_indexOfNextTab = we_indexOfActiveTab + 1;
-        we_indexOfPrevTab = we_indexOfActiveTab - 1;
-        we_prevTab = tabList[we_indexOfPrevTab];
-        we_amountOfTabs = tabList.length;
-
-        if (we_indexOfNextTab < we_amountOfTabs) {
-          tabList[we_indexOfNextTab] = nextTab;
-        } else {
-          tabList.push(nextTab);
-        }
-        $(we_tabs_next_button).addClass(we_tabs_active_class);
-        $(".w--tab-active").attr('next-tab',nextTab);
-        $($('[data-w-tab=thanks]')).attr('prev-tab',we_activeTab);
-
-
-      }});
-
 </script>
