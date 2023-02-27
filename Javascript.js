@@ -194,7 +194,7 @@ var we_tabs_next_button = '[bloc=next-question]';
       $($('[data-w-tab=form]')).attr('prev-tab',we_activeTab);
 
       });
-    $('#datenschutz').on('click',function() {
+    $('[bloc=datenschutz]').on('click',function() {
   if($('.w--tab-active').attr('data-w-tab')=='form') {
 
         nextTab = 'upload';
