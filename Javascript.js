@@ -1,4 +1,4 @@
-var haarfarbe, bereich, jahre, Kundenname, form, upload, optional, thanks;
+var haarfarbe, bereich, jahre, client_name, form, upload, optional, thanks;
 
 
 var we_tabs_next_button = '[bloc=next-question]';
@@ -194,8 +194,8 @@ var we_tabs_next_button = '[bloc=next-question]';
       $($('[data-w-tab=form]')).attr('prev-tab',we_activeTab);
 
       });
-    $("[name=Kundenname]").on("input", function () {
-    Kundenname = getValueFromInput("Kundenname");
+    $("[name=client_name]").on("input", function () {
+    client_name = getValueFromInput("client_name");
 
       nextTab = 'upload';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
@@ -216,9 +216,9 @@ var we_tabs_next_button = '[bloc=next-question]';
 
       });
 
-    $("[name=Kundenname]").parent("label.w-radio").on("click", function () {
+    $("[name=client_name]").parent("label.w-radio").on("click", function () {
       clickedRadioButtonValue = $("input", this).val();
-      Kundenname = getValueFromInput("Kundenname");
+      client_name = getValueFromInput("client_name");
 
       nextTab = 'upload';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
