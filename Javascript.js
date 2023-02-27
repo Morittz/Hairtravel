@@ -1,4 +1,4 @@
-var haarfarbe, bereich, seit, datenschutz, form, datenschutz_2, upload, optional, thanks;
+var haarfarbe, bereich, jahre, datenschutz, form, datenschutz_2, upload, optional, thanks;
 
 
 var we_tabs_next_button = '[bloc=next-question]';
@@ -109,7 +109,7 @@ var we_tabs_next_button = '[bloc=next-question]';
     $("[name=bereich]").on("input", function () {
     bereich = getValueFromInput("bereich");
 
-      nextTab = 'seit';
+      nextTab = 'jahre';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
       we_indexOfActiveTab = tabList.indexOf(we_activeTab);
       we_indexOfNextTab = we_indexOfActiveTab + 1;
@@ -124,7 +124,7 @@ var we_tabs_next_button = '[bloc=next-question]';
       }
       $(we_tabs_next_button).addClass(we_tabs_active_class);
       $(".w--tab-active").attr('next-tab',nextTab);
-      $($('[data-w-tab=seit]')).attr('prev-tab',we_activeTab);
+      $($('[data-w-tab=jahre]')).attr('prev-tab',we_activeTab);
 
       });
 
@@ -132,7 +132,7 @@ var we_tabs_next_button = '[bloc=next-question]';
       clickedRadioButtonValue = $("input", this).val();
       bereich = getValueFromInput("bereich");
 
-      nextTab = 'seit';
+      nextTab = 'jahre';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
       we_indexOfActiveTab = tabList.indexOf(we_activeTab);
       we_indexOfNextTab = we_indexOfActiveTab + 1;
@@ -147,11 +147,11 @@ var we_tabs_next_button = '[bloc=next-question]';
       }
       $(we_tabs_next_button).addClass(we_tabs_active_class);
       $(".w--tab-active").attr('next-tab',nextTab);
-      $($('[data-w-tab=seit]')).attr('prev-tab',we_activeTab);
+      $($('[data-w-tab=jahre]')).attr('prev-tab',we_activeTab);
 
       });
-    $("[name=seit]").on("input", function () {
-    seit = getValueFromInput("seit");
+    $("[name=jahre]").on("input", function () {
+    jahre = getValueFromInput("jahre");
 
       nextTab = 'form';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
@@ -172,9 +172,9 @@ var we_tabs_next_button = '[bloc=next-question]';
 
       });
 
-    $("[name=seit]").parent("label.w-radio").on("click", function () {
+    $("[name=jahre]").parent("label.w-radio").on("click", function () {
       clickedRadioButtonValue = $("input", this).val();
-      seit = getValueFromInput("seit");
+      jahre = getValueFromInput("jahre");
 
       nextTab = 'form';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
