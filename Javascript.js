@@ -1,4 +1,4 @@
-var haarfarbe, bereich, jahre, client_name, form, number, upload, optional, thanks;
+var Haarfarbe, Bereich, Seit, Datenschutz, form, upload, optional, thanks;
 
 
 var we_tabs_next_button = '[bloc=next-question]';
@@ -7,7 +7,7 @@ var we_tabs_next_button = '[bloc=next-question]';
 
     var we_activeTab,we_indexOfActiveTab, we_indexOfNextTab, we_indexOfPrevTab, we_prevTab, we_amountOfTabs, nextTab;
 
-    var tabList = ['haarfarbe'];
+    var tabList = ['Haarfarbe'];
 
     openTab(tabList[0]);
 
@@ -62,10 +62,10 @@ var we_tabs_next_button = '[bloc=next-question]';
       $(tab).addClass("w--tab-active");
       $(tab_link).siblings("a").removeClass("w--current");
       $(tab_link).addClass("w--current");
-    }$("[name=haarfarbe]").on("input", function () {
-    haarfarbe = getValueFromInput("haarfarbe");
+    }$("[name=Haarfarbe]").on("input", function () {
+    Haarfarbe = getValueFromInput("Haarfarbe");
 
-      nextTab = 'bereich';
+      nextTab = 'Bereich';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
       we_indexOfActiveTab = tabList.indexOf(we_activeTab);
       we_indexOfNextTab = we_indexOfActiveTab + 1;
@@ -80,15 +80,15 @@ var we_tabs_next_button = '[bloc=next-question]';
       }
       $(we_tabs_next_button).addClass(we_tabs_active_class);
       $(".w--tab-active").attr('next-tab',nextTab);
-      $($('[data-w-tab=bereich]')).attr('prev-tab',we_activeTab);
+      $($('[data-w-tab=Bereich]')).attr('prev-tab',we_activeTab);
 
       });
 
-    $("[name=haarfarbe]").parent("label.w-radio").on("click", function () {
+    $("[name=Haarfarbe]").parent("label.w-radio").on("click", function () {
       clickedRadioButtonValue = $("input", this).val();
-      haarfarbe = getValueFromInput("haarfarbe");
+      Haarfarbe = getValueFromInput("Haarfarbe");
 
-      nextTab = 'bereich';
+      nextTab = 'Bereich';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
       we_indexOfActiveTab = tabList.indexOf(we_activeTab);
       we_indexOfNextTab = we_indexOfActiveTab + 1;
@@ -103,13 +103,13 @@ var we_tabs_next_button = '[bloc=next-question]';
       }
       $(we_tabs_next_button).addClass(we_tabs_active_class);
       $(".w--tab-active").attr('next-tab',nextTab);
-      $($('[data-w-tab=bereich]')).attr('prev-tab',we_activeTab);
+      $($('[data-w-tab=Bereich]')).attr('prev-tab',we_activeTab);
 
       });
-    $("[name=bereich]").on("input", function () {
-    bereich = getValueFromInput("bereich");
+    $("[name=Bereich]").on("input", function () {
+    Bereich = getValueFromInput("Bereich");
 
-      nextTab = 'jahre';
+      nextTab = 'Seit';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
       we_indexOfActiveTab = tabList.indexOf(we_activeTab);
       we_indexOfNextTab = we_indexOfActiveTab + 1;
@@ -124,15 +124,15 @@ var we_tabs_next_button = '[bloc=next-question]';
       }
       $(we_tabs_next_button).addClass(we_tabs_active_class);
       $(".w--tab-active").attr('next-tab',nextTab);
-      $($('[data-w-tab=jahre]')).attr('prev-tab',we_activeTab);
+      $($('[data-w-tab=Seit]')).attr('prev-tab',we_activeTab);
 
       });
 
-    $("[name=bereich]").parent("label.w-radio").on("click", function () {
+    $("[name=Bereich]").parent("label.w-radio").on("click", function () {
       clickedRadioButtonValue = $("input", this).val();
-      bereich = getValueFromInput("bereich");
+      Bereich = getValueFromInput("Bereich");
 
-      nextTab = 'jahre';
+      nextTab = 'Seit';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
       we_indexOfActiveTab = tabList.indexOf(we_activeTab);
       we_indexOfNextTab = we_indexOfActiveTab + 1;
@@ -147,11 +147,11 @@ var we_tabs_next_button = '[bloc=next-question]';
       }
       $(we_tabs_next_button).addClass(we_tabs_active_class);
       $(".w--tab-active").attr('next-tab',nextTab);
-      $($('[data-w-tab=jahre]')).attr('prev-tab',we_activeTab);
+      $($('[data-w-tab=Seit]')).attr('prev-tab',we_activeTab);
 
       });
-    $("[name=jahre]").on("input", function () {
-    jahre = getValueFromInput("jahre");
+    $("[name=Seit]").on("input", function () {
+    Seit = getValueFromInput("Seit");
 
       nextTab = 'form';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
@@ -172,9 +172,9 @@ var we_tabs_next_button = '[bloc=next-question]';
 
       });
 
-    $("[name=jahre]").parent("label.w-radio").on("click", function () {
+    $("[name=Seit]").parent("label.w-radio").on("click", function () {
       clickedRadioButtonValue = $("input", this).val();
-      jahre = getValueFromInput("jahre");
+      Seit = getValueFromInput("Seit");
 
       nextTab = 'form';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
@@ -194,9 +194,9 @@ var we_tabs_next_button = '[bloc=next-question]';
       $($('[data-w-tab=form]')).attr('prev-tab',we_activeTab);
 
       });
-    $("[name=client_name]").on("input", function () {
-    client_name = getValueFromInput("client_name");
-      if (client_name == null && number == null) {
+    $("[name=Datenschutz]").on("input", function () {
+    Datenschutz = getValueFromInput("Datenschutz");
+      if (Datenschutz == null) {
 
         nextTab = 'upload';
         we_activeTab = $(".w--tab-active").attr("data-w-tab");
@@ -218,58 +218,10 @@ var we_tabs_next_button = '[bloc=next-question]';
         }
 });
 
-    $("[name=client_name]").parent("label.w-radio").on("click", function () {
+    $("[name=Datenschutz]").parent("label.w-radio").on("click", function () {
       clickedRadioButtonValue = $("input", this).val();
-      client_name = getValueFromInput("client_name");
-        if (client_name == null && number == null) {
-
-        nextTab = 'upload';
-        we_activeTab = $(".w--tab-active").attr("data-w-tab");
-        we_indexOfActiveTab = tabList.indexOf(we_activeTab);
-        we_indexOfNextTab = we_indexOfActiveTab + 1;
-        we_indexOfPrevTab = we_indexOfActiveTab - 1;
-        we_prevTab = tabList[we_indexOfPrevTab];
-        we_amountOfTabs = tabList.length;
-
-        if (we_indexOfNextTab < we_amountOfTabs) {
-          tabList[we_indexOfNextTab] = nextTab;
-        } else {
-          tabList.push(nextTab);
-        }
-        $(we_tabs_next_button).addClass(we_tabs_active_class);
-        $(".w--tab-active").attr('next-tab',nextTab);
-        $($('[data-w-tab=upload]')).attr('prev-tab',we_activeTab);
-
-        }
-});
-    $("[name=number]").on("input", function () {
-    number = getValueFromInput("number");
-      if (client_name == null && number == null) {
-
-        nextTab = 'upload';
-        we_activeTab = $(".w--tab-active").attr("data-w-tab");
-        we_indexOfActiveTab = tabList.indexOf(we_activeTab);
-        we_indexOfNextTab = we_indexOfActiveTab + 1;
-        we_indexOfPrevTab = we_indexOfActiveTab - 1;
-        we_prevTab = tabList[we_indexOfPrevTab];
-        we_amountOfTabs = tabList.length;
-
-        if (we_indexOfNextTab < we_amountOfTabs) {
-          tabList[we_indexOfNextTab] = nextTab;
-        } else {
-          tabList.push(nextTab);
-        }
-        $(we_tabs_next_button).addClass(we_tabs_active_class);
-        $(".w--tab-active").attr('next-tab',nextTab);
-        $($('[data-w-tab=upload]')).attr('prev-tab',we_activeTab);
-
-        }
-});
-
-    $("[name=number]").parent("label.w-radio").on("click", function () {
-      clickedRadioButtonValue = $("input", this).val();
-      number = getValueFromInput("number");
-        if (client_name == null && number == null) {
+      Datenschutz = getValueFromInput("Datenschutz");
+        if (Datenschutz == null) {
 
         nextTab = 'upload';
         we_activeTab = $(".w--tab-active").attr("data-w-tab");
