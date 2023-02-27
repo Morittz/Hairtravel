@@ -1,4 +1,4 @@
-var haarfarbe, bereich, jahre, email, form, datenschutz_2, upload, datenschutz, optional, thanks;
+var haarfarbe, bereich, jahre, datenschutz, form, upload;
 
 
 var we_tabs_next_button = '[bloc=next-question]';
@@ -194,83 +194,10 @@ var we_tabs_next_button = '[bloc=next-question]';
       $($('[data-w-tab=form]')).attr('prev-tab',we_activeTab);
 
       });
-    $("[name=email]").on("input", function () {
-    email = getValueFromInput("email");
-      if (datenschutz != null) {
+    $("[name=datenschutz]").on("input", function () {
+    datenschutz = getValueFromInput("datenschutz");
 
-        nextTab = 'upload';
-        we_activeTab = $(".w--tab-active").attr("data-w-tab");
-        we_indexOfActiveTab = tabList.indexOf(we_activeTab);
-        we_indexOfNextTab = we_indexOfActiveTab + 1;
-        we_indexOfPrevTab = we_indexOfActiveTab - 1;
-        we_prevTab = tabList[we_indexOfPrevTab];
-        we_amountOfTabs = tabList.length;
-
-        if (we_indexOfNextTab < we_amountOfTabs) {
-          tabList[we_indexOfNextTab] = nextTab;
-        } else {
-          tabList.push(nextTab);
-        }
-        $(we_tabs_next_button).addClass(we_tabs_active_class);
-        $(".w--tab-active").attr('next-tab',nextTab);
-        $($('[data-w-tab=upload]')).attr('prev-tab',we_activeTab);
-
-        }
-});
-
-    $("[name=email]").parent("label.w-radio").on("click", function () {
-      clickedRadioButtonValue = $("input", this).val();
-      email = getValueFromInput("email");
-        if (datenschutz != null) {
-
-        nextTab = 'upload';
-        we_activeTab = $(".w--tab-active").attr("data-w-tab");
-        we_indexOfActiveTab = tabList.indexOf(we_activeTab);
-        we_indexOfNextTab = we_indexOfActiveTab + 1;
-        we_indexOfPrevTab = we_indexOfActiveTab - 1;
-        we_prevTab = tabList[we_indexOfPrevTab];
-        we_amountOfTabs = tabList.length;
-
-        if (we_indexOfNextTab < we_amountOfTabs) {
-          tabList[we_indexOfNextTab] = nextTab;
-        } else {
-          tabList.push(nextTab);
-        }
-        $(we_tabs_next_button).addClass(we_tabs_active_class);
-        $(".w--tab-active").attr('next-tab',nextTab);
-        $($('[data-w-tab=upload]')).attr('prev-tab',we_activeTab);
-
-        }
-});
-    $('[bloc=next-question]').on('click',function() {
-  if($('.w--tab-active').attr('data-w-tab')=='upload') {
-
-        nextTab = 'optional';
-        we_activeTab = $(".w--tab-active").attr("data-w-tab");
-        we_indexOfActiveTab = tabList.indexOf(we_activeTab);
-        we_indexOfNextTab = we_indexOfActiveTab + 1;
-        we_indexOfPrevTab = we_indexOfActiveTab - 1;
-        we_prevTab = tabList[we_indexOfPrevTab];
-        we_amountOfTabs = tabList.length;
-
-        if (we_indexOfNextTab < we_amountOfTabs) {
-          tabList[we_indexOfNextTab] = nextTab;
-        } else {
-          tabList.push(nextTab);
-        }
-        $(we_tabs_next_button).addClass(we_tabs_active_class);
-        $(".w--tab-active").attr('next-tab',nextTab);
-        $($('[data-w-tab=optional]')).attr('prev-tab',we_activeTab);
-
-
-      }});
-$("[name=datenschutz_2]").on("input", function () {
-    datenschutz_2 = getValueFromInput("datenschutz_2");
-      if (datenschutz_2 != null) {
-    $('#optional-button').text('Absenden');
-  }
-
-      nextTab = 'thanks';
+      nextTab = 'upload';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
       we_indexOfActiveTab = tabList.indexOf(we_activeTab);
       we_indexOfNextTab = we_indexOfActiveTab + 1;
@@ -285,18 +212,15 @@ $("[name=datenschutz_2]").on("input", function () {
       }
       $(we_tabs_next_button).addClass(we_tabs_active_class);
       $(".w--tab-active").attr('next-tab',nextTab);
-      $($('[data-w-tab=thanks]')).attr('prev-tab',we_activeTab);
+      $($('[data-w-tab=upload]')).attr('prev-tab',we_activeTab);
 
       });
 
-    $("[name=datenschutz_2]").parent("label.w-radio").on("click", function () {
+    $("[name=datenschutz]").parent("label.w-radio").on("click", function () {
       clickedRadioButtonValue = $("input", this).val();
-      datenschutz_2 = getValueFromInput("datenschutz_2");
-        if (datenschutz_2 != null) {
-    $('#optional-button').text('Absenden');
-  }
+      datenschutz = getValueFromInput("datenschutz");
 
-      nextTab = 'thanks';
+      nextTab = 'upload';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
       we_indexOfActiveTab = tabList.indexOf(we_activeTab);
       we_indexOfNextTab = we_indexOfActiveTab + 1;
@@ -311,28 +235,6 @@ $("[name=datenschutz_2]").on("input", function () {
       }
       $(we_tabs_next_button).addClass(we_tabs_active_class);
       $(".w--tab-active").attr('next-tab',nextTab);
-      $($('[data-w-tab=thanks]')).attr('prev-tab',we_activeTab);
+      $($('[data-w-tab=upload]')).attr('prev-tab',we_activeTab);
 
       });
-    $('[bloc=next-question]').on('click',function() {
-  if($('.w--tab-active').attr('data-w-tab')=='optional') {
-
-        nextTab = 'thanks';
-        we_activeTab = $(".w--tab-active").attr("data-w-tab");
-        we_indexOfActiveTab = tabList.indexOf(we_activeTab);
-        we_indexOfNextTab = we_indexOfActiveTab + 1;
-        we_indexOfPrevTab = we_indexOfActiveTab - 1;
-        we_prevTab = tabList[we_indexOfPrevTab];
-        we_amountOfTabs = tabList.length;
-
-        if (we_indexOfNextTab < we_amountOfTabs) {
-          tabList[we_indexOfNextTab] = nextTab;
-        } else {
-          tabList.push(nextTab);
-        }
-        $(we_tabs_next_button).addClass(we_tabs_active_class);
-        $(".w--tab-active").attr('next-tab',nextTab);
-        $($('[data-w-tab=thanks]')).attr('prev-tab',we_activeTab);
-
-
-      }});
