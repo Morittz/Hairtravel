@@ -1,4 +1,4 @@
-var haarfarbe, bereich, jahre, kundenname, form, upload, optional, thanks;
+var haarfarbe, bereich, seit, client_name, form, upload, optional, thanks;
 
 
 var we_tabs_next_button = '[bloc=next-question]';
@@ -109,7 +109,7 @@ var we_tabs_next_button = '[bloc=next-question]';
     $("[name=bereich]").on("input", function () {
     bereich = getValueFromInput("bereich");
 
-      nextTab = 'jahre';
+      nextTab = 'seit';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
       we_indexOfActiveTab = tabList.indexOf(we_activeTab);
       we_indexOfNextTab = we_indexOfActiveTab + 1;
@@ -124,7 +124,7 @@ var we_tabs_next_button = '[bloc=next-question]';
       }
       $(we_tabs_next_button).addClass(we_tabs_active_class);
       $(".w--tab-active").attr('next-tab',nextTab);
-      $($('[data-w-tab=jahre]')).attr('prev-tab',we_activeTab);
+      $($('[data-w-tab=seit]')).attr('prev-tab',we_activeTab);
 
       });
 
@@ -132,7 +132,7 @@ var we_tabs_next_button = '[bloc=next-question]';
       clickedRadioButtonValue = $("input", this).val();
       bereich = getValueFromInput("bereich");
 
-      nextTab = 'jahre';
+      nextTab = 'seit';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
       we_indexOfActiveTab = tabList.indexOf(we_activeTab);
       we_indexOfNextTab = we_indexOfActiveTab + 1;
@@ -147,11 +147,11 @@ var we_tabs_next_button = '[bloc=next-question]';
       }
       $(we_tabs_next_button).addClass(we_tabs_active_class);
       $(".w--tab-active").attr('next-tab',nextTab);
-      $($('[data-w-tab=jahre]')).attr('prev-tab',we_activeTab);
+      $($('[data-w-tab=seit]')).attr('prev-tab',we_activeTab);
 
       });
-    $("[name=jahre]").on("input", function () {
-    jahre = getValueFromInput("jahre");
+    $("[name=seit]").on("input", function () {
+    seit = getValueFromInput("seit");
 
       nextTab = 'form';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
@@ -172,9 +172,9 @@ var we_tabs_next_button = '[bloc=next-question]';
 
       });
 
-    $("[name=jahre]").parent("label.w-radio").on("click", function () {
+    $("[name=seit]").parent("label.w-radio").on("click", function () {
       clickedRadioButtonValue = $("input", this).val();
-      jahre = getValueFromInput("jahre");
+      seit = getValueFromInput("seit");
 
       nextTab = 'form';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
@@ -194,8 +194,8 @@ var we_tabs_next_button = '[bloc=next-question]';
       $($('[data-w-tab=form]')).attr('prev-tab',we_activeTab);
 
       });
-    $("[name=kundenname]").on("input", function () {
-    kundenname = getValueFromInput("kundenname");
+    $("[name=client_name]").on("input", function () {
+    client_name = getValueFromInput("client_name");
 
       nextTab = 'upload';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
@@ -216,9 +216,9 @@ var we_tabs_next_button = '[bloc=next-question]';
 
       });
 
-    $("[name=kundenname]").parent("label.w-radio").on("click", function () {
+    $("[name=client_name]").parent("label.w-radio").on("click", function () {
       clickedRadioButtonValue = $("input", this).val();
-      kundenname = getValueFromInput("kundenname");
+      client_name = getValueFromInput("client_name");
 
       nextTab = 'upload';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
