@@ -1,4 +1,4 @@
-var Haarfarbe, Bereich, Seit, Datenschutz, form, upload, optional, thanks;
+var haarfarbe, Bereich, Seit, Datenschutz, form, upload, optional, thanks;
 
 
 var we_tabs_next_button = '[bloc=next-question]';
@@ -7,7 +7,7 @@ var we_tabs_next_button = '[bloc=next-question]';
 
     var we_activeTab,we_indexOfActiveTab, we_indexOfNextTab, we_indexOfPrevTab, we_prevTab, we_amountOfTabs, nextTab;
 
-    var tabList = ['Haarfarbe'];
+    var tabList = ['haarfarbe'];
 
     openTab(tabList[0]);
 
@@ -62,8 +62,8 @@ var we_tabs_next_button = '[bloc=next-question]';
       $(tab).addClass("w--tab-active");
       $(tab_link).siblings("a").removeClass("w--current");
       $(tab_link).addClass("w--current");
-    }$("[name=Haarfarbe]").on("input", function () {
-    Haarfarbe = getValueFromInput("Haarfarbe");
+    }$("[name=haarfarbe]").on("input", function () {
+    haarfarbe = getValueFromInput("haarfarbe");
 
       nextTab = 'Bereich';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
@@ -84,9 +84,9 @@ var we_tabs_next_button = '[bloc=next-question]';
 
       });
 
-    $("[name=Haarfarbe]").parent("label.w-radio").on("click", function () {
+    $("[name=haarfarbe]").parent("label.w-radio").on("click", function () {
       clickedRadioButtonValue = $("input", this).val();
-      Haarfarbe = getValueFromInput("Haarfarbe");
+      haarfarbe = getValueFromInput("haarfarbe");
 
       nextTab = 'Bereich';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
