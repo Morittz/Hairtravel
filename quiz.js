@@ -1,4 +1,4 @@
-var haarfarbe, bereich, jahre, form, upload, datenschutz, optional, datenschutz_2, thanks;
+var haarfarbe, bereich, jahre, form, upload, optional, datenschutz_2, thanks;
 
 
 var we_tabs_next_button = '[bloc=next-question]';
@@ -194,7 +194,7 @@ var we_tabs_next_button = '[bloc=next-question]';
       $($('[data-w-tab=form]')).attr('prev-tab',we_activeTab);
 
       });
-    if ('#' + datenschutz != null) {
+    $('#datenschutz').on('click',function() {
   if($('.w--tab-active').attr('data-w-tab')=='form') {
 
         nextTab = 'upload';
@@ -215,7 +215,7 @@ var we_tabs_next_button = '[bloc=next-question]';
         $($('[data-w-tab=upload]')).attr('prev-tab',we_activeTab);
 
 
-      }}
+      }});
 $('[bloc=next-question]').on('click',function() {
   if($('.w--tab-active').attr('data-w-tab')=='upload') {
 
