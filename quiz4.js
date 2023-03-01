@@ -1,4 +1,4 @@
-var haarfarbe, bereich, jahre, form, upload, optional, datenschutz_2, thanks;
+var haarfarbe, bereich, jahre, form, upload, optional, thanks;
 
 
 var we_tabs_next_button = '[bloc=next-question]';
@@ -238,9 +238,9 @@ $('[bloc=next-question]').on('click',function() {
 
 
       }});
-if ('#' + datenschutz_2 != null) {
+$('#datenschutz-2').on('click',function() {
   $('#optional-button').text('Absenden');
-}
+});
 $('[bloc=next-question]').on('click',function() {
   if($('.w--tab-active').attr('data-w-tab')=='optional') {
 
