@@ -238,9 +238,6 @@ $('[bloc=next-question]').on('click',function() {
 
 
       }});
-$('#datenschutz-2').on('click',function() {
-  $('#optional-button').text('Absenden');
-});
 $('[bloc=next-question]').on('click',function() {
   if($('.w--tab-active').attr('data-w-tab')=='optional') {
 
